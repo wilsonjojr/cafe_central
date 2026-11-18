@@ -28,10 +28,12 @@ export interface SubmitContactResult {
   createdAt: string | null;
 }
 
+export const TELEGRAM_BOT_URL = "https://t.me/botWillTestN8N_bot";
+
 export const socialLinks = {
-  // Provisional links: replace these with the café's real profiles.
+  // Provisional Instagram link: replace with the café's real profile when available.
   instagram: "https://www.instagram.com/cafecentral.exemplo/",
-  telegram: "https://t.me/cafecentral_exemplo",
+  telegram: TELEGRAM_BOT_URL,
 };
 
 export async function fetchCatalog(): Promise<CatalogData> {

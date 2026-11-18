@@ -1,9 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import {
   ALL_CATEGORY,
+  TELEGRAM_BOT_URL,
   fetchCatalog,
   filterProductsByCategory,
   normalizePhone,
+  socialLinks,
   submitContactForm,
   validateContact,
   type CatalogCategory,
@@ -212,5 +214,12 @@ describe("Contact validation and submission", () => {
     await expect(submitContactForm(valid)).rejects.toThrow(
       "Não foi possível enviar sua mensagem no momento. Tente novamente.",
     );
+  });
+});
+
+describe("Telegram support links", () => {
+  it("uses the centralized official Café Central Telegram bot URL", () => {
+    expect(TELEGRAM_BOT_URL).toBe("https://t.me/botWillTestN8N_bot");
+    expect(socialLinks.telegram).toBe(TELEGRAM_BOT_URL);
   });
 });
