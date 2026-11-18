@@ -1,0 +1,5 @@
+{
+  "name": "Café Central",
+  "description": "Site da cafeteria Café Central com cardápio integrado ao Supabase e formulário de contato.",
+  "requestFramePermissions": []
+}
